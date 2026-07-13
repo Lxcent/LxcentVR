@@ -27,6 +27,7 @@ body {
   line-height: 1.6;
   background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(140, 91, 255, 0.18), transparent 24%), var(--bg);
   min-height: 100vh;
+  padding: 0 0.8rem;
 }
 
 body::before {
@@ -58,7 +59,7 @@ img {
 }
 
 .page-shell {
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1180px, 100%);
   margin: 0 auto;
   padding: 1rem 0 2rem;
 }
@@ -142,6 +143,7 @@ p {
   display: grid;
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .cards-grid {
@@ -211,6 +213,11 @@ p {
 
 .page-intro {
   margin-bottom: 1.2rem;
+  padding: 0 0.2rem;
+}
+
+.lower-section {
+  margin-top: 2rem;
 }
 
 .portfolio-grid {
@@ -305,5 +312,9 @@ textarea::placeholder {
 
   .site-header {
     justify-content: center;
+  }
+
+  body {
+    padding: 0 0.6rem;
   }
 }
