@@ -25,7 +25,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
   line-height: 1.6;
-  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(140, 91, 255, 0.18), transparent 24%), var(--bg);
+  background: var(--bg);
   min-height: 100vh;
   padding: 0 0.8rem;
 }
@@ -34,11 +34,12 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image:
+  background:
+    radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(140, 91, 255, 0.18), transparent 24%),
     radial-gradient(circle, rgba(140, 91, 255, 0.72) 1px, transparent 1.2px),
     radial-gradient(circle, rgba(140, 91, 255, 0.45) 1px, transparent 1.3px);
-  background-size: 180px 180px, 260px 260px;
-  background-position: 0 0, 60px 90px;
+  background-size: auto, 180px 180px, 260px 260px;
+  background-position: 0 0, 0 0, 60px 90px;
   opacity: calc(0.24 + var(--star-brightness) * 0.35);
   pointer-events: none;
   z-index: -2;

@@ -14,6 +14,7 @@ const updatePointer = (event) => {
 };
 
 document.addEventListener('pointermove', updatePointer);
+document.addEventListener('pointerdown', updatePointer);
 window.addEventListener('pointerleave', () => root.style.setProperty('--star-brightness', '0.3'));
 window.addEventListener('resize', () => {
   const x = root.style.getPropertyValue('--pointer-x') || '50%';
