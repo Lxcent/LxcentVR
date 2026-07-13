@@ -49,23 +49,33 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdown.addEventListener('change', () => syncPackageDetails(dropdown));
   });
 
-  const emailButton = document.querySelector('.email-button');
-  const copyBubble = document.getElementById('copy-bubble');
+  document.querySelectorAll('.email-button').forEach((button) => {
+    const emailAddress = button.dataset.email || 'contact.lxcent@gmail.com';
+    const parent = button.parentElement;
+    let copyBubble = parent?.querySelector('.copy-bubble');
 
-  if (emailButton && copyBubble) {
-    emailButton.addEventListener('click', async () => {
+    if (!copyBubble) {
+      copyBubble = document.createElement('span');
+      copyBubble.className = 'copy-bubble';
+      parent?.appendChild(copyBubble);
+    }
+
+    button.addEventListener('click', async () => {
       try {
-        await navigator.clipboard.writeText('contact.lxcent@gmail.com');
+        await navigator.clipboard.writeText(emailAddress);
+        button.innerHTML = '✓ Copied';
         copyBubble.textContent = 'Email copied!';
       } catch (error) {
-        copyBubble.textContent = 'contact.lxcent@gmail.com';
+        button.innerHTML = '✉️ Email';
+        copyBubble.textContent = emailAddress;
       }
 
       copyBubble.classList.add('visible');
-      clearTimeout(window.copyBubbleTimer);
-      window.copyBubbleTimer = window.setTimeout(() => {
+      clearTimeout(button.copyBubbleTimer);
+      button.copyBubbleTimer = window.setTimeout(() => {
         copyBubble.classList.remove('visible');
+        button.innerHTML = '✉️ Email';
       }, 1800);
     });
-  }
+  });
 });
