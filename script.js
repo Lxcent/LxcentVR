@@ -32,11 +32,12 @@ window.addEventListener('resize', () => {
 document.querySelectorAll('.package-dropdown').forEach((dropdown) => {
   dropdown.addEventListener('change', (event) => {
     const selected = event.target.value;
-    const panel = event.target.dataset.panel;
     const container = event.target.closest('.pricing-panel');
 
     container.querySelectorAll('.package-details').forEach((detail) => {
-      detail.hidden = detail.dataset.package !== selected;
+      const shouldShow = detail.dataset.package === selected;
+      detail.removeAttribute('hidden');
+      detail.style.display = shouldShow ? 'block' : 'none';
     });
   });
 });
