@@ -29,15 +29,23 @@ window.addEventListener('resize', () => {
   root.style.setProperty('--star-brightness', '0.35');
 });
 
-document.querySelectorAll('.package-dropdown').forEach((dropdown) => {
-  dropdown.addEventListener('change', (event) => {
-    const selected = event.target.value;
-    const container = event.target.closest('.pricing-panel');
+const syncPackageDetails = (dropdown) => {
+  const selected = dropdown.value;
+  const container = dropdown.closest('.pricing-panel');
 
-    container.querySelectorAll('.package-details').forEach((detail) => {
-      const shouldShow = detail.dataset.package === selected;
-      detail.removeAttribute('hidden');
-      detail.style.display = shouldShow ? 'block' : 'none';
-    });
+  if (!container) {
+    return;
+  }
+
+  container.querySelectorAll('.package-details').forEach((detail) => {
+    const shouldShow = detail.dataset.package === selected;
+    detail.style.display = shouldShow ? 'block' : 'none';
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.package-dropdown').forEach((dropdown) => {
+    syncPackageDetails(dropdown);
+    dropdown.addEventListener('change', () => syncPackageDetails(dropdown));
   });
 });
