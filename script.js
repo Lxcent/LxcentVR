@@ -48,4 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
     syncPackageDetails(dropdown);
     dropdown.addEventListener('change', () => syncPackageDetails(dropdown));
   });
+
+  const emailButton = document.querySelector('.email-button');
+  const copyBubble = document.getElementById('copy-bubble');
+
+  if (emailButton && copyBubble) {
+    emailButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('contact.lxcent@gmail.com');
+        copyBubble.textContent = 'Email copied!';
+      } catch (error) {
+        copyBubble.textContent = 'contact.lxcent@gmail.com';
+      }
+
+      copyBubble.classList.add('visible');
+      clearTimeout(window.copyBubbleTimer);
+      window.copyBubbleTimer = window.setTimeout(() => {
+        copyBubble.classList.remove('visible');
+      }, 1800);
+    });
+  }
 });

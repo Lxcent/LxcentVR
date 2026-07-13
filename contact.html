@@ -3,57 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | LxcentVR</title>
+    <title>Contact | Lxcent</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="index.html">LxcentVR</a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="terms.html">Terms</a>
-        <a class="active" href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <div class="stars-layer" aria-hidden="true"></div>
 
-    <main class="page">
-      <section class="page-intro">
-        <p class="eyebrow">Start a commission</p>
-        <h1>Let’s talk about your avatar project.</h1>
-        <p>Send a short message with your idea, current avatar status, and what kind of support you need.</p>
-      </section>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">Lxcent</a>
+      </header>
 
-      <section class="contact-layout">
-        <form class="contact-form">
-          <label>
-            Name
-            <input type="text" placeholder="Your name" />
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="you@example.com" />
-          </label>
-          <label>
-            Project Details
-            <textarea rows="6" placeholder="Tell me about your avatar and what you need help with."></textarea>
-          </label>
-          <button class="button primary" type="submit">Send Inquiry</button>
-        </form>
+      <main class="page">
+        <section class="page-intro">
+          <p class="eyebrow">Contact</p>
+          <h1>Let’s talk about your avatar project.</h1>
+          <p>I usually communicate through Discord, and I ask that anyone reaching out for commissions first lets me know in DMs that they want my services.</p>
+        </section>
 
-        <aside class="card">
-          <h3>Contact info</h3>
-          <p>Email: commissions@lxcentvr.com</p>
-          <p>Discord: @LxcentVR</p>
-          <p>Response time is usually within a few days.</p>
-        </aside>
-      </section>
-    </main>
+        <section class="contact-card">
+          <h3>Commission contact</h3>
+          <p>If you want to work together, please reach out through Discord first so I can confirm that the request is genuine and not a scam or spam attempt.</p>
+          <div class="contact-actions">
+            <a class="icon-button discord-button" href="https://discord.com/users/846015431164166184" target="_blank" rel="noopener noreferrer" aria-label="Open Discord profile">
+              <span>💬</span>
+              <span>Discord</span>
+            </a>
+            <button class="icon-button email-button" type="button" aria-label="Copy email address">
+              <span>✉️</span>
+              <span>Email</span>
+            </button>
+            <span class="copy-bubble" id="copy-bubble">contact.lxcent@gmail.com</span>
+          </div>
+        </section>
+      </main>
 
-    <footer class="site-footer">
-      <p>© 2026 LxcentVR — Available for avatar rigging commissions.</p>
-    </footer>
+      <footer class="site-footer">
+        <p>© 2026 Lxcent — Commission contact and support.</p>
+      </footer>
+    </div>
   </body>
 </html>
