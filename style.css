@@ -359,29 +359,32 @@ p {
 }
 
 .friends-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .friend-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 1.15rem 1.25rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.24);
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 1.4rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
 }
 
 .friend-avatar {
-  width: 96px;
-  height: 96px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(140, 91, 255, 0.16);
   flex-shrink: 0;
 }
 
@@ -409,7 +412,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 0.8rem;
+  margin-top: 0.95rem;
 }
 
 .contact-card h3 {
