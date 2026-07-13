@@ -174,7 +174,7 @@ p {
 .project-card:hover {
   transform: translateY(-5px);
   border-color: #c6a9ff;
-  background: var(--panel-hover);
+  background: rgba(0, 0, 0, 0.72);
   box-shadow: 0 12px 45px rgba(140, 91, 255, 0.16);
 }
 
@@ -444,7 +444,9 @@ p {
 
 .icon-button:hover {
   transform: translateY(-2px);
-  background: rgba(140, 91, 255, 0.25);
+  background: rgba(0, 0, 0, 0.72);
+  border-color: #e7dcff;
+  box-shadow: 0 0 0 1px rgba(231, 220, 255, 0.4), 0 0 18px rgba(140, 91, 255, 0.24);
 }
 
 .copy-bubble {
