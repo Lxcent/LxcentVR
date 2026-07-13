@@ -174,7 +174,7 @@ p {
 .project-card:hover {
   transform: translateY(-5px);
   border-color: #c6a9ff;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0, 0, 0, 0);
   box-shadow: 0 12px 45px rgba(140, 91, 255, 0.16);
 }
 
@@ -444,8 +444,8 @@ p {
 
 .icon-button:hover {
   transform: translateY(-2px);
-  background: rgba(0, 0, 0, 0.72);
-  border-color: #e7dcff;
+  background: rgba(0, 0, 0, 0);
+  border-color: #c7adff;
   box-shadow: 0 0 0 1px rgba(231, 220, 255, 0.4), 0 0 18px rgba(140, 91, 255, 0.24);
 }
 
