@@ -288,10 +288,22 @@ p {
 
 .package-select select {
   width: 100%;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(140, 91, 255, 0.35);
   border-radius: 12px;
   padding: 0.75rem 0.9rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(10, 12, 24, 0.95), rgba(34, 26, 56, 0.95));
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.package-select select:focus {
+  outline: none;
+  border-color: #c6a9ff;
+  box-shadow: 0 0 0 2px rgba(140, 91, 255, 0.25);
+}
+
+.package-select select option {
+  background: #120f1f;
   color: var(--text);
 }
 

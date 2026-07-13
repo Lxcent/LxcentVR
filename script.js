@@ -28,3 +28,15 @@ window.addEventListener('resize', () => {
   root.style.setProperty('--pointer-y', '50vh');
   root.style.setProperty('--star-brightness', '0.35');
 });
+
+document.querySelectorAll('.package-dropdown').forEach((dropdown) => {
+  dropdown.addEventListener('change', (event) => {
+    const selected = event.target.value;
+    const panel = event.target.dataset.panel;
+    const container = event.target.closest('.pricing-panel');
+
+    container.querySelectorAll('.package-details').forEach((detail) => {
+      detail.hidden = detail.dataset.package !== selected;
+    });
+  });
+});

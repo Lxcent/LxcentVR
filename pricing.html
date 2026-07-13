@@ -38,15 +38,20 @@
 
             <label class="package-select">
               <span>Package</span>
-              <select>
-                <option>Select a Package</option>
-                <option>Essential (PC Package)</option>
-                <option>Enhanced (PC Package)</option>
-                <option>Complete (PC Package)</option>
+              <select class="package-dropdown" data-panel="pc">
+                <option value="default">Select a Package</option>
+                <option value="essential-pc">Essential (PC Package)</option>
+                <option value="enhanced-pc">Enhanced (PC Package)</option>
+                <option value="complete-pc">Complete (PC Package)</option>
               </select>
             </label>
 
-            <div class="package-details">
+            <div class="package-details" data-package="default">
+              <h4>Select a package to view details.</h4>
+              <p class="package-placeholder">Choose a package to see what is included and the price.</p>
+            </div>
+
+            <div class="package-details" data-package="essential-pc" hidden>
               <h4>Essential (PC Package)</h4>
               <ul>
                 <li>Avatar setup ✔</li>
@@ -67,6 +72,49 @@
               <p class="price">20€</p>
             </div>
 
+            <div class="package-details" data-package="enhanced-pc" hidden>
+              <h4>Enhanced (PC Package)</h4>
+              <ul>
+                <li>Everything from Essential ✔</li>
+                <li>Texture Routing ✔</li>
+                <li>Poiyomi setup ✔</li>
+                <li>Static Emissions ✔</li>
+                <li>GoGoLoco setup ✔</li>
+                <li>Custom Hand Gestures ✔</li>
+                <li>Basic material adjustments ✔</li>
+                <li>Basic toggles ✔</li>
+                <li>Basic contacts ✔</li>
+                <li>Basic optimization ✔</li>
+              </ul>
+              <ul class="negative-list">
+                <li>Audiolink ✖</li>
+                <li>Voice-reactive effects ✖</li>
+                <li>Advanced Animator System ✖</li>
+                <li>Complex material swapping ✖</li>
+              </ul>
+              <p class="price">40€</p>
+            </div>
+
+            <div class="package-details" data-package="complete-pc" hidden>
+              <h4>Complete (PC Package)</h4>
+              <ul>
+                <li>Everything from Enhanced ✔</li>
+                <li>Audiolink ✔</li>
+                <li>Voice-reactive emissions ✔</li>
+                <li>Color-changing emissions ✔</li>
+                <li>Blend trees ✔</li>
+                <li>Advanced animator controllers ✔</li>
+                <li>Material swaps ✔</li>
+                <li>Advanced toggles ✔</li>
+                <li>Contacts ✔</li>
+                <li>Basic non-humanoid animations ✔</li>
+                <li>Performance reviews ✔</li>
+                <li>Optimization versus expressiveness ✔</li>
+                <li>Constant testing and updates ✔</li>
+              </ul>
+              <p class="price">70-80€</p>
+            </div>
+
             <p class="package-footnote">These packages assume the avatar already has a complete Blender rig (bones, weight painting, shape keys, etc.). Unity implementation only.</p>
           </article>
 
@@ -76,15 +124,20 @@
 
             <label class="package-select">
               <span>Package</span>
-              <select>
-                <option>Select a Package</option>
-                <option>Essential (Quest Package)</option>
-                <option>Enhanced (Quest Package)</option>
-                <option>Complete (Quest Package)</option>
+              <select class="package-dropdown" data-panel="mobile">
+                <option value="default">Select a Package</option>
+                <option value="essential-mobile">Essential (Quest Package)</option>
+                <option value="enhanced-mobile">Enhanced (Quest Package)</option>
+                <option value="complete-mobile">Complete (Quest Package)</option>
               </select>
             </label>
 
-            <div class="package-details">
+            <div class="package-details" data-package="default">
+              <h4>Select a package to view details.</h4>
+              <p class="package-placeholder">Choose a package to see what is included and the price.</p>
+            </div>
+
+            <div class="package-details" data-package="essential-mobile" hidden>
               <h4>Essential (Quest Package)</h4>
               <ul>
                 <li>Quest upload/setup ✔</li>
@@ -93,6 +146,30 @@
                 <li>Basic testing ✔</li>
               </ul>
               <p class="price">15€</p>
+            </div>
+
+            <div class="package-details" data-package="enhanced-mobile" hidden>
+              <h4>Enhanced (Quest Package)</h4>
+              <ul>
+                <li>Everything from Essential ✔</li>
+                <li>Shader conversion ✔</li>
+                <li>Basic performance reviews ✔</li>
+                <li>Minor hierarchy cleanup ✔</li>
+              </ul>
+              <p class="price">30€</p>
+            </div>
+
+            <div class="package-details" data-package="complete-mobile" hidden>
+              <h4>Complete (Quest Package)</h4>
+              <ul>
+                <li>Everything from Enhanced ✔</li>
+                <li>Mobile expression menu setup ✔</li>
+                <li>Mobile Physbones ✔</li>
+                <li>Quest-compatible toggles ✔</li>
+                <li>Performance-conscious adjustments ✔</li>
+                <li>Constant testing ✔</li>
+              </ul>
+              <p class="price">50€</p>
             </div>
 
             <p class="package-footnote"><strong>Important:</strong> Mobile compatibility depends on the avatar. If the model requires changes in Blender, those changes must be completed before I can continue with the Unity setup.</p>
