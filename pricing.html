@@ -3,50 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing | LxcentVR</title>
+    <title>Pricing | Lxcent</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="index.html">LxcentVR</a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a class="active" href="pricing.html">Pricing</a>
-        <a href="terms.html">Terms</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <div class="stars-layer" aria-hidden="true"></div>
 
-    <main class="page">
-      <section class="page-intro">
-        <p class="eyebrow">Pricing options</p>
-        <h1>Simple commission pricing for different project sizes.</h1>
-        <p>Pricing depends on complexity, scope, and your avatar’s current state.</p>
-      </section>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">Lxcent</a>
+      </header>
 
-      <section class="pricing-grid">
-        <article class="price-card">
-          <h3>Starter</h3>
-          <p class="price">-----</p>
-          <p>Basic rigging support and setup improvements for smaller projects.</p>
-        </article>
-        <article class="price-card featured">
-          <h3>Standard</h3>
-          <p class="price">-----</p>
-          <p>More detailed rigging work, expression support, and multiple refinements.</p>
-        </article>
-        <article class="price-card">
-          <h3>Custom</h3>
-          <p class="price">-----</p>
-          <p>Complex commissions with specific requirements, detailed revisions, or larger scope.</p>
-        </article>
-      </section>
-    </main>
+      <main class="page">
+        <section class="page-intro">
+          <p class="eyebrow">Pricing overview</p>
+          <h1>Clear packages for PC and mobile avatar commissions.</h1>
+          <p>I focus on expressiveness and performance, while keeping the work practical for your avatar’s intended platform.</p>
+        </section>
 
-    <footer class="site-footer">
-      <p>© 2026 LxcentVR — Pricing based on the needs of your avatar project.</p>
-    </footer>
+        <section class="note-card">
+          <p>I’m not here to optimize for the sake of optimization alone. I aim for expressive, polished avatars while keeping performance in mind whenever it does not conflict with the overall feel and intent.</p>
+        </section>
+
+        <section class="status-note">
+          <p><strong>PC Commissions: Open</strong></p>
+          <p><strong>Quest/Mobile: Limited Availability</strong></p>
+        </section>
+
+        <section class="pricing-two-column">
+          <article class="price-card pricing-panel">
+            <h3>PC Avatar Services</h3>
+            <p class="panel-description">These are the services I offer for PC avatars.</p>
+
+            <label class="package-select">
+              <span>Package</span>
+              <select>
+                <option>Select a Package</option>
+                <option>Essential (PC Package)</option>
+                <option>Enhanced (PC Package)</option>
+                <option>Complete (PC Package)</option>
+              </select>
+            </label>
+
+            <div class="package-details">
+              <h4>Essential (PC Package)</h4>
+              <ul>
+                <li>Avatar setup ✔</li>
+                <li>Physbones ✔</li>
+                <li>Colliders ✔</li>
+                <li>Expression Menu ✔</li>
+                <li>Parameters ✔</li>
+                <li>Upload configuration ✔</li>
+              </ul>
+              <ul class="negative-list">
+                <li>Audiolink ✖</li>
+                <li>Animated Emissions ✖</li>
+                <li>Advanced Toggles ✖</li>
+                <li>Contacts ✖</li>
+                <li>GoGoLoco ✖</li>
+                <li>Custom Simple Animations ✖</li>
+              </ul>
+              <p class="price">20€</p>
+            </div>
+
+            <p class="package-footnote">These packages assume the avatar already has a complete Blender rig (bones, weight painting, shape keys, etc.). Unity implementation only.</p>
+          </article>
+
+          <article class="price-card pricing-panel">
+            <h3>Mobile Avatar Services</h3>
+            <p class="panel-description">These are the services I offer for Quest/mobile avatars.</p>
+
+            <label class="package-select">
+              <span>Package</span>
+              <select>
+                <option>Select a Package</option>
+                <option>Essential (Quest Package)</option>
+                <option>Enhanced (Quest Package)</option>
+                <option>Complete (Quest Package)</option>
+              </select>
+            </label>
+
+            <div class="package-details">
+              <h4>Essential (Quest Package)</h4>
+              <ul>
+                <li>Quest upload/setup ✔</li>
+                <li>Required components ✔</li>
+                <li>Basic materials ✔</li>
+                <li>Basic testing ✔</li>
+              </ul>
+              <p class="price">15€</p>
+            </div>
+
+            <p class="package-footnote"><strong>Important:</strong> Mobile compatibility depends on the avatar. If the model requires changes in Blender, those changes must be completed before I can continue with the Unity setup.</p>
+          </article>
+        </section>
+
+        <section class="note-card custom-note">
+          <h3>Need something different?</h3>
+          <p>If your project does not fit one of the packages, feel free to contact me on Discord. I’m happy to discuss custom work and provide a personalized quote.</p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Lxcent — Pricing for avatar commissions.</p>
+      </footer>
+    </div>
   </body>
 </html>
